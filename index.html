@@ -34,6 +34,7 @@
                 let setHeight = window.innerHeight + "px";
                 $("html").css("min-height", setHeight);
                 $("body").css({"min-height": setHeight, "margin": "0px"});
+                $("body").css({"grid-template-rows": "1fr 2fr 2fr"});
             }
             $(document).ready(updateHeight());
             $(document).resize(updateHeight());
