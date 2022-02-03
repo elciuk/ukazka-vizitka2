@@ -3,7 +3,7 @@ body{
     min-height:90vh;
     display:flex;
     flex-direction:column;
-    justify-content:space-evenly;
+    justify-content:space-between;
     background-color:#9A3636;
     color:white;
     font-family:'Helvetica Neue', sans-serif;
@@ -31,7 +31,7 @@ a{
     padding-left:20px;
 }
 .foto img{
-    max-width:240px;
+    max-width:200px;
 }
 .jmeno h1{
     font-size:49px;
@@ -41,6 +41,7 @@ a{
 }
 #kopirovat{
     margin:auto;
+    margin-bottom:10px;
     display:block;
     border-radius:15px;
     font-size:17px;
