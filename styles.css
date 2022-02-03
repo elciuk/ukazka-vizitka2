@@ -31,7 +31,7 @@ a{
     padding-left:20px;
 }
 .foto img{
-    max-width:280px;
+    max-width:240px;
 }
 .jmeno h1{
     font-size:49px;
@@ -58,6 +58,7 @@ a{
         grid-template-columns:1fr 1fr;
         grid-template-rows: 1fr 2fr 2fr;
         font-weight:bold;
+        height:100vh;
     }
     .jmeno{
         grid-column:1/2;
