@@ -4,6 +4,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styles.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+             const copyToClipboard = function() {
+  /* Get the text field */
+  let copyText = document.getElementById("adresaKopirovat").innerText;
+                console.log(copyText);
+  /* Select the text field */
+  /*copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  document.execCommand("copy");
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText);
+}
+        </script>
     </head>
     <body>
         <div class="jmeno">
@@ -39,20 +55,7 @@
             $(document).ready(updateHeight());
             $(document).resize(updateHeight());
 
-            function copyToClipboard() {
-  /* Get the text field */
-  let copyText = document.getElementById("adresaKopirovat");
-
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-   /* Copy the text inside the text field */
-  navigator.clipboard.writeText(copyText.value);
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-}
+           
         </script>
     </body>
 </html>
