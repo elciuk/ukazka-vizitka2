@@ -3,7 +3,7 @@ body{
     min-height:90vh;
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
+    justify-content:space-evenly;
     background-color:#9A3636;
     color:white;
     font-family:'Helvetica Neue', sans-serif;
