@@ -113,6 +113,10 @@ a{
 .adresa p{
     text-align:center;
 }
+.web p{
+    font-size:18px;
+    text-align:center;
+}
 #kopirovat{
     margin:auto;
     margin-bottom:10px;
@@ -167,6 +171,10 @@ a{
     }
     .web a{
         font-size:76px;
+    }
+    .web p{
+        font-size:35px;
+        text-align:center;
     }
     .adresa{
         grid-column:2/3;
