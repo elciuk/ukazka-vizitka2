@@ -1,3 +1,12 @@
+:root{
+    --blue:#2E71F2;
+    --red:#9A3636;
+    --green:#3EAF95;
+    --grey:#838383;
+    --gold:#D9B548;
+    --purple:#B851D1;
+}
+
 body{
     width:100%;
     min-height:90vh;
@@ -8,34 +17,99 @@ body{
     color:white;
     font-family:'Helvetica Neue', sans-serif;
 }
+.web{
+    font-weight:700;
+}
 *{
     align-self:center;
     justify-self:center;
+    margin:0px;
+    padding:0px;
+    margin-block-start: 0px;
+    margin-block-end:0px;
 }
 a{
     text-decoration:none;
     color:white;
+}
+.web{
+    justify-self: center;
+    align-self:center;
 }
 .web a{
     font-size: 35px;
 }
 .kontakty{
     display:grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content max-content;
+    padding-top:10px;
+    gap:0;
 }
-.kontakty a, .adresa p{
+
+
+.zmenaBarev{
+    grid-column:2/3;
+    justify-content:center;
+    align-content:center;
+}
+.zmenaBarev p{
+    font-size:15px !important;
+}
+.meniciTlacitko{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    border:solid black 1px;
+}
+#blue{
+    background-color:var(--blue);
+}
+#red{
+    background-color: var(--red);
+}
+#green{
+    background-color: var(--green);
+}
+#grey{
+    background-color: var(--grey);
+}
+#gold{
+    background-color: var(--gold);
+}
+#purple{
+    background-color: var(--purple);
+}
+.socky{
+    text-align:right;
+    padding-right:10px;
+
+    justify-self:flex-end;
+}
+
+.kontakty a, .kontakty p{
+    align-self: flex-start;
+}
+.kontakty a, .adresa p, .kontakty p{
     font-size:26px;
 }
-#telefon{
-    padding-left:20px;
+#telefon, #mail{
+    text-align: left;
+    padding-left: 20px;
+    
 }
+
 .foto img{
     max-width:200px;
+}
+.jmeno{
+    align-self:center;
+    justify-self: center;
 }
 .jmeno h1{
     font-size:49px;
 }
+
 .adresa p{
     text-align:center;
 }
@@ -53,17 +127,18 @@ a{
     padding:8px;
 }
 
-@media(min-width:840px){
+@media(min-width:860px){
     body{
         display:grid;
         grid-template-columns:1fr 1fr;
-        grid-template-rows: 1fr 2fr 2fr;
-        font-weight:bold;
+        grid-template-rows: 1fr 2fr 2fr 1fr;
         height:100vh;
     }
     .jmeno{
         grid-column:1/2;
         grid-row:1/2;
+        margin-top:5%;
+        margin-bottom:10%;
     }
     .jmeno h1{
         font-size:100px;
@@ -73,30 +148,46 @@ a{
         grid-row:2/4;
     }
     .foto img{
-        max-width:700px;
+        max-width:600px;
     }
     .kontakty{
         grid-column:2/3;
         grid-row:1/2;
+        justify-content:flex-end;
+        justify-self: flex-end;
+        align-self:flex-start;
+        margin: 5% 5% 0 0;
     }
     .kontakty .a, .adresa p{
         font-size:47px;
     }
     .web{
         grid-column:2/3;
-        grid-row:2/3;
+        grid-row:2/4;
     }
     .web a{
         font-size:76px;
     }
     .adresa{
         grid-column:2/3;
-        grid-row:3/4;
+        grid-row:4/5;
+    }
+    .adresa{
+        justify-self: flex-end;
+        align-self:flex-end;
+        margin: 0 5% 5% 0;
     }
     .adresa p{
         text-align:left;
     }
     #kopirovat{
         display:none;
+    }
+    .zmenaBarev{
+        grid-column:2/3;
+        grid-row:1/2;
+        align-self:flex-end;
+        justify-self:flex-end;
+        margin-right:5%;
     }
 }

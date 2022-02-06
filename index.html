@@ -7,23 +7,24 @@
         <script>
              const copyToClipboard = function() {
   /* Get the text field */
-  let copyText = document.getElementById("adresaKopirovat").innerText;
-                console.log(copyText);
+    let copyText = document.getElementById("adresaKopirovat").innerText;
+    let copyName = document.getElementById("jmenoKopirovat").innerText;
   /* Select the text field */
   /*copyText.select();
   copyText.setSelectionRange(0, 99999); /* For mobile devices */
   document.execCommand("copy");
    /* Copy the text inside the text field */
-  navigator.clipboard.writeText(copyText);
+  navigator.clipboard.writeText(copyName + copyText);
 
   /* Alert the copied text */
   alert("adresa zkopírována");
 }
         </script>
+        <script src="https://kit.fontawesome.com/b4ddc3d283.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="jmeno">
-            <h1>Tomáš Jedno</h1>
+            <h1 id="jmenoKopirovat">tomáš jedno<br></h1>
         </div>
         <div class="foto">
             <img src="logo_vzor_vizitky.png">
@@ -32,10 +33,11 @@
             <a href="https://toxiclab.cz">www.toxiclab.cz</a>
         </div>
         <div class="kontakty">
-            <a href="https://www.facebook.com" target="_blank">fb</a>
-            <a id="telefon" href="tel:+420773926670">✆ +420 773 926 670</a>
-            <a href="https://www.instagram.com" target="_blank">ig</a>
-            <a href="mailto:info@toxiclab.cz">✉ info@toxiclab.cz</a>
+            <a class="socky" href="https://www.facebook.com" target="_blank">fb</a>
+            <a id="telefon" href="tel:+420773926670">+420 773 926 670</a>
+            <a class="socky" href="https://www.instagram.com" target="_blank">ig</a>
+            <a id="mail" href="mailto:info@toxiclab.cz">info@toxiclab.cz</a>
+           
         </div>
         <div class="adresa">
             <p id="adresaKopirovat">
@@ -45,16 +47,30 @@
             </p>
             <button id="kopirovat" onclick="copyToClipboard()">kopírovat adresu</button>
         </div>
+        <div class="zmenaBarev">
+            <p>Zmenit barvu vizitky</p>
+            <div>
+                <button class="meniciTlacitko" id="blue" onclick="changeColor(`var(--blue)`)"></button>
+                <button class="meniciTlacitko" id="red" onclick="changeColor(`var(--red)`)"></button>
+                <button class="meniciTlacitko" id="green" onclick="changeColor(`var(--green)`)"></button>
+                <button class="meniciTlacitko" id="grey" onclick="changeColor(`var(--grey)`)"></button>
+                <button class="meniciTlacitko" id="gold" onclick="changeColor(`var(--gold)`)"></button>
+                <button class="meniciTlacitko" id="purple" onclick="changeColor(`var(--purple)`)"></button>
+            </div>
+        </div>
         <script>
             const updateHeight = function(){
                 let setHeight = window.innerHeight + "px";
                 $("html").css("min-height", setHeight);
                 $("body").css({"min-height": setHeight, "margin": "0px"});
-                $("body").css({"grid-template-rows": "1fr 2fr 2fr"});
+
             }
             $(document).ready(updateHeight());
             $(document).resize(updateHeight());
 
+            const changeColor = function(barva){
+                $("body").css({"background-color": barva});
+            }
            
         </script>
     </body>
